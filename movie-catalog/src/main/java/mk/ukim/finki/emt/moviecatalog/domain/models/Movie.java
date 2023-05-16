@@ -15,4 +15,21 @@ public class Movie extends AbstractEntity<MovieId> {
     @Enumerated(value = EnumType.STRING)
     private Genre genre;
     private Price price;
+
+
+    protected Movie() {
+        super(MovieId.randomId(MovieId.class));
+    }
+
+
+
+    public static Movie build(String movieName, int duration, int rating, Genre genre, Price price) {
+        Movie movie = new Movie();
+        movie.movieName = movieName;
+        movie.duration = duration;
+        movie.rating = rating;
+        movie.genre = genre;
+        movie.price = price;
+        return movie;
+    }
 }

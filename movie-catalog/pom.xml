@@ -46,7 +46,11 @@
 			<artifactId>shared-kernel</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-	</dependencies>
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+        </dependency>
+    </dependencies>
 
 	<build>
 		<plugins>
