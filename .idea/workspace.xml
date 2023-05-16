@@ -4,22 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28ea6e5a-7e1c-4765-9fda-dd793fbba86a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/movie-catalog/src/main/java/mk/ukim/finki/emt/moviecatalog/domain/models/MovieId.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/movie-catalog/src/main/java/mk/ukim/finki/emt/moviecatalog/domain/valueObjects/Genre.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shared-kernel/src/main/java/mk/ukim/finki/emt/sharedkernel/domain/base/DomainObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shared-kernel/src/main/java/mk/ukim/finki/emt/sharedkernel/domain/base/DomainObjectId.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shared-kernel/src/main/java/mk/ukim/finki/emt/sharedkernel/domain/base/ValueObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shared-kernel/src/main/java/mk/ukim/finki/emt/sharedkernel/domain/financial/Currency.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shared-kernel/src/main/java/mk/ukim/finki/emt/sharedkernel/domain/financial/Price.java" afterDir="false" />
+    <list default="true" id="28ea6e5a-7e1c-4765-9fda-dd793fbba86a" name="Changes" comment="Created project modules and configured pom.xml, application.properties and models.">
+      <change afterPath="$PROJECT_DIR$/order-management/src/main/java/mk/ukim/finki/emt/ordermanagement/domain/model/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-management/src/main/java/mk/ukim/finki/emt/ordermanagement/domain/model/OrderId.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-management/src/main/java/mk/ukim/finki/emt/ordermanagement/domain/model/OrderMovie.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-management/src/main/java/mk/ukim/finki/emt/ordermanagement/domain/model/OrderMovieId.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-management/src/main/java/mk/ukim/finki/emt/ordermanagement/domain/valueObjects/MovieId.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-management/src/main/java/mk/ukim/finki/emt/ordermanagement/domain/valueObjects/UserId.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shared-kernel/src/main/java/mk/ukim/finki/emt/sharedkernel/domain/valueObjects/Quality.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shared-kernel/src/main/java/mk/ukim/finki/emt/sharedkernel/domain/valueObjects/QualitySize.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-management/src/main/java/mk/ukim/finki/emt/usermanagement/domain/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-management/src/main/java/mk/ukim/finki/emt/usermanagement/domain/model/UserId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3f79a8b2-5d41-454a-a14c-71bc69f7a30f.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3f79a8b2-5d41-454a-a14c-71bc69f7a30f/storage_v2/_src_/database/postgres.edMnLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3f79a8b2-5d41-454a-a14c-71bc69f7a30f/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3f79a8b2-5d41-454a-a14c-71bc69f7a30f/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8b408e80-480c-44b8-91fa-f45c7388df69.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/8b408e80-480c-44b8-91fa-f45c7388df69.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9404c9ae-5a02-4f50-9ea4-6deb3a1247ce.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9404c9ae-5a02-4f50-9ea4-6deb3a1247ce.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9404c9ae-5a02-4f50-9ea4-6deb3a1247ce/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9404c9ae-5a02-4f50-9ea4-6deb3a1247ce/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared-kernel/src/main/java/mk/ukim/finki/emt/sharedkernel/domain/financial/Price.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared-kernel/src/main/java/mk/ukim/finki/emt/sharedkernel/domain/financial/Price.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,14 +35,26 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="bb77f091-39bc-4b97-810d-5bf514a8201b" />
+        <option name="url" value="https://github.com/Nasteskii/DDD-movieOrders.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -64,6 +82,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "reference.settings.project.maven.importing",
+    "spring.configuration.checksum": "7147f4131ffc015b50f243f3d68cd41a",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -72,7 +91,7 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected="Spring Boot.MovieCatalogApplication">
+  <component name="RunManager" selected="Spring Boot.OrderManagementApplication">
     <configuration name="MovieCatalogApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="movie-catalog" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="mk.ukim.finki.emt.moviecatalog.MovieCatalogApplication" />
@@ -110,11 +129,47 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1684157871443</updated>
-      <workItem from="1684157872674" duration="7287000" />
+      <workItem from="1684157872674" duration="8471000" />
+      <workItem from="1684229028194" duration="3863000" />
     </task>
+    <task id="LOCAL-00001" summary="Created project modules and configured pom.xml, application.properties and models.">
+      <created>1684170123681</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1684170123681</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Created project modules and configured pom.xml, application.properties and models." />
+    <option name="LAST_COMMIT_MESSAGE" value="Created project modules and configured pom.xml, application.properties and models." />
   </component>
 </project>
