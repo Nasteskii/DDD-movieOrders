@@ -4,7 +4,11 @@ import lombok.NonNull;
 import mk.ukim.finki.emt.sharedkernel.domain.base.DomainObjectId;
 
 public class OrderMovieId extends DomainObjectId {
-    protected OrderMovieId(@NonNull Long uuid) {
+    private OrderMovieId() {
+        super(OrderMovieId.randomId(OrderMovieId.class).getId());
+    }
+
+    public OrderMovieId(@NonNull String uuid) {
         super(uuid);
     }
 }

@@ -10,7 +10,7 @@ public class MovieId extends DomainObjectId {
         super(MovieId.randomId(MovieId.class).getId());
     }
 
-    public MovieId(Long uuid) {
+    public MovieId(String uuid) {
         super(uuid);
     }
 

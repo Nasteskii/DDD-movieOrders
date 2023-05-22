@@ -11,6 +11,7 @@ import mk.ukim.finki.emt.sharedkernel.domain.valueObjects.Quality;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
@@ -18,7 +19,7 @@ import java.util.Set;
 @Table(name = "orders")
 public class Order extends AbstractEntity<OrderId> {
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    private Set<OrderMovie> orderMovieSet;
+    private Set<OrderMovie> orderMovieSet = new HashSet<>();
     @AttributeOverride(name = "id", column = @Column(name = "user_id", nullable = false))
     private UserId userId;
     @Column(name = "order_currency")
@@ -30,6 +31,7 @@ public class Order extends AbstractEntity<OrderId> {
 
     public Order(@NotNull UserId userId, @NotNull Currency currency) {
         super(OrderId.randomId(OrderId.class));
+        this.userId = userId;
         this.currency = currency;
     }
 

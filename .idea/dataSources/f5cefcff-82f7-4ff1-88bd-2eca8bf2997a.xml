@@ -3,7 +3,7 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.45">
     <root id="1">
       <DateStyle>mdy</DateStyle>
-      <IntrospectionStateNumber>4810</IntrospectionStateNumber>
+      <IntrospectionStateNumber>4846</IntrospectionStateNumber>
       <ServerVersion>15.2</ServerVersion>
       <StartupTime>1683816755</StartupTime>
       <TimeZones>true ACDT
@@ -813,7 +813,7 @@ false Zulu
 13183||10|C|G
 13183||-9223372036854775808|U|G
 13183||10|U|G</Grants>
-      <IntrospectionStateNumber>4810</IntrospectionStateNumber>
+      <IntrospectionStateNumber>4846</IntrospectionStateNumber>
       <ObjectId>17574</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4231,64 +4231,67 @@ false Zulu
     <schema id="265" parent="5" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>4810</IntrospectionStateNumber>
+      <IntrospectionStateNumber>4846</IntrospectionStateNumber>
       <ObjectId>2200</ObjectId>
       <StateNumber>518</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
     </schema>
     <table id="266" parent="265" name="users">
-      <ObjectId>17604</ObjectId>
-      <StateNumber>4803</StateNumber>
+      <ObjectId>17627</ObjectId>
+      <StateNumber>4845</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
     <column id="267" parent="266" name="id">
-      <DasType>bigint|0s</DasType>
+      <DasType>varchar(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>4803</StateNumber>
-      <TypeId>20</TypeId>
+      <StateNumber>4845</StateNumber>
+      <TypeId>1043</TypeId>
     </column>
     <column id="268" parent="266" name="amount">
       <DasType>double precision|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>4803</StateNumber>
+      <StateNumber>4845</StateNumber>
       <TypeId>701</TypeId>
     </column>
     <column id="269" parent="266" name="currency">
       <DasType>varchar(255)|0s</DasType>
       <Position>3</Position>
-      <StateNumber>4803</StateNumber>
+      <StateNumber>4845</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="270" parent="266" name="password">
       <DasType>varchar(255)|0s</DasType>
       <Position>4</Position>
-      <StateNumber>4803</StateNumber>
+      <StateNumber>4845</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="271" parent="266" name="username">
       <DasType>varchar(255)|0s</DasType>
       <Position>5</Position>
-      <StateNumber>4803</StateNumber>
+      <StateNumber>4845</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <index id="272" parent="266" name="users_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>17609</ObjectId>
+      <ObjectId>17632</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>4803</StateNumber>
+      <StateNumber>4845</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
+      <CollationNames>default</CollationNames>
+      <CollationIds>100</CollationIds>
+      <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
     <key id="273" parent="266" name="users_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>17610</ObjectId>
+      <ObjectId>17633</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>4803</StateNumber>
-      <UnderlyingIndexId>17609</UnderlyingIndexId>
+      <StateNumber>4845</StateNumber>
+      <UnderlyingIndexId>17632</UnderlyingIndexId>
     </key>
   </database-model>
 </dataSource>

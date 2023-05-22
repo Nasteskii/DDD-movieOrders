@@ -1,5 +1,6 @@
 package mk.ukim.finki.emt.moviecatalog.domain.models;
 
+import lombok.Getter;
 import mk.ukim.finki.emt.moviecatalog.domain.valueObjects.Genre;
 import mk.ukim.finki.emt.sharedkernel.domain.base.AbstractEntity;
 import mk.ukim.finki.emt.sharedkernel.domain.financial.Price;
@@ -8,6 +9,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "movie")
+@Getter
 public class Movie extends AbstractEntity<MovieId> {
     private String movieName;
     private int duration;

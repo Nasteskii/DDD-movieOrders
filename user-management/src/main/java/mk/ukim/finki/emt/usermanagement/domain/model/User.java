@@ -12,4 +12,12 @@ public class User extends AbstractEntity<UserId> {
     private String username;
     private String password;
     private Price bankAccount;
+
+    public static User build(String username, String password, Price bankAccount) {
+        User user = new User();
+        user.username = username;
+        user.password = password;
+        user.bankAccount = bankAccount;
+        return user;
+    }
 }

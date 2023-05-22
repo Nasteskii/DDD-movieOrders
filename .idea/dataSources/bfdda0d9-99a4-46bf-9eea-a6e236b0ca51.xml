@@ -3,7 +3,7 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.45">
     <root id="1">
       <DateStyle>mdy</DateStyle>
-      <IntrospectionStateNumber>4809</IntrospectionStateNumber>
+      <IntrospectionStateNumber>4859</IntrospectionStateNumber>
       <ServerVersion>15.2</ServerVersion>
       <StartupTime>1683816755</StartupTime>
       <TimeZones>true ACDT
@@ -809,7 +809,7 @@ false Zulu
 13183||10|C|G
 13183||-9223372036854775808|U|G
 13183||10|U|G</Grants>
-      <IntrospectionStateNumber>4809</IntrospectionStateNumber>
+      <IntrospectionStateNumber>4859</IntrospectionStateNumber>
       <ObjectId>17573</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4231,188 +4231,190 @@ false Zulu
     <schema id="265" parent="4" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>4809</IntrospectionStateNumber>
+      <IntrospectionStateNumber>4859</IntrospectionStateNumber>
       <ObjectId>2200</ObjectId>
       <StateNumber>518</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
     </schema>
     <table id="266" parent="265" name="order_movie">
-      <ObjectId>17575</ObjectId>
-      <StateNumber>4800</StateNumber>
+      <ObjectId>17634</ObjectId>
+      <StateNumber>4857</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
     <table id="267" parent="265" name="orders">
-      <ObjectId>17582</ObjectId>
-      <StateNumber>4807</StateNumber>
+      <ObjectId>17641</ObjectId>
+      <StateNumber>4858</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
     <table id="268" parent="265" name="orders_order_movie">
-      <ObjectId>17587</ObjectId>
-      <StateNumber>4800</StateNumber>
+      <ObjectId>17648</ObjectId>
+      <StateNumber>4857</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
     <column id="269" parent="266" name="id">
-      <DasType>bigint|0s</DasType>
+      <DasType>varchar(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>4794</StateNumber>
-      <TypeId>20</TypeId>
+      <StateNumber>4852</StateNumber>
+      <TypeId>1043</TypeId>
     </column>
     <column id="270" parent="266" name="movie_id">
-      <DasType>bigint|0s</DasType>
+      <DasType>varchar(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>4794</StateNumber>
-      <TypeId>20</TypeId>
+      <StateNumber>4852</StateNumber>
+      <TypeId>1043</TypeId>
     </column>
     <column id="271" parent="266" name="amount">
       <DasType>double precision|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
-      <StateNumber>4794</StateNumber>
+      <StateNumber>4852</StateNumber>
       <TypeId>701</TypeId>
     </column>
     <column id="272" parent="266" name="currency">
       <DasType>varchar(255)|0s</DasType>
       <Position>4</Position>
-      <StateNumber>4794</StateNumber>
+      <StateNumber>4852</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="273" parent="266" name="quality_size">
       <DasType>varchar(255)|0s</DasType>
       <Position>5</Position>
-      <StateNumber>4794</StateNumber>
+      <StateNumber>4852</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <index id="274" parent="266" name="order_movie_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>17580</ObjectId>
+      <ObjectId>17639</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>4794</StateNumber>
+      <StateNumber>4852</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
+      <CollationNames>default</CollationNames>
+      <CollationIds>100</CollationIds>
+      <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
     <key id="275" parent="266" name="order_movie_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>17581</ObjectId>
+      <ObjectId>17640</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>4794</StateNumber>
-      <UnderlyingIndexId>17580</UnderlyingIndexId>
+      <StateNumber>4852</StateNumber>
+      <UnderlyingIndexId>17639</UnderlyingIndexId>
     </key>
     <column id="276" parent="267" name="id">
-      <DasType>bigint|0s</DasType>
+      <DasType>varchar(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>4796</StateNumber>
-      <TypeId>20</TypeId>
-    </column>
-    <column id="277" parent="267" name="amount">
-      <DasType>double precision|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StateNumber>4796</StateNumber>
-      <TypeId>701</TypeId>
-    </column>
-    <column id="278" parent="267" name="currency">
-      <DasType>varchar(255)|0s</DasType>
-      <Position>3</Position>
-      <StateNumber>4796</StateNumber>
+      <StateNumber>4853</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="279" parent="267" name="user_id">
+    <column id="277" parent="267" name="order_currency">
+      <DasType>varchar(255)|0s</DasType>
+      <Position>2</Position>
+      <StateNumber>4853</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="278" parent="267" name="user_id">
       <DasType>bytea|0s</DasType>
-      <Position>4</Position>
-      <StateNumber>4805</StateNumber>
+      <Position>3</Position>
+      <StateNumber>4853</StateNumber>
       <TypeId>17</TypeId>
     </column>
-    <column id="280" parent="267" name="order_currency">
-      <DasType>varchar(255)|0s</DasType>
-      <Position>5</Position>
-      <StateNumber>4807</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <index id="281" parent="267" name="orders_pkey">
+    <index id="279" parent="267" name="orders_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>17585</ObjectId>
+      <ObjectId>17646</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>4796</StateNumber>
+      <StateNumber>4853</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
+      <CollationNames>default</CollationNames>
+      <CollationIds>100</CollationIds>
+      <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="282" parent="267" name="orders_pkey">
+    <key id="280" parent="267" name="orders_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>17586</ObjectId>
+      <ObjectId>17647</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>4796</StateNumber>
-      <UnderlyingIndexId>17585</UnderlyingIndexId>
+      <StateNumber>4853</StateNumber>
+      <UnderlyingIndexId>17646</UnderlyingIndexId>
     </key>
-    <column id="283" parent="268" name="order_id">
-      <DasType>bigint|0s</DasType>
+    <column id="281" parent="268" name="order_id">
+      <DasType>varchar(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>4797</StateNumber>
-      <TypeId>20</TypeId>
+      <StateNumber>4854</StateNumber>
+      <TypeId>1043</TypeId>
     </column>
-    <column id="284" parent="268" name="order_movie_set_id">
-      <DasType>bigint|0s</DasType>
+    <column id="282" parent="268" name="order_movie_set_id">
+      <DasType>varchar(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>4797</StateNumber>
-      <TypeId>20</TypeId>
+      <StateNumber>4854</StateNumber>
+      <TypeId>1043</TypeId>
     </column>
-    <foreign-key id="285" parent="268" name="fkhkr4fxvjhb1mfvnu7ip2hylxa">
+    <foreign-key id="283" parent="268" name="fkhkr4fxvjhb1mfvnu7ip2hylxa">
       <ColNames>order_id</ColNames>
-      <ObjectId>17599</ObjectId>
+      <ObjectId>17662</ObjectId>
       <RefColNames>id</RefColNames>
       <RefColPositions>1</RefColPositions>
-      <StateNumber>4801</StateNumber>
-      <RefTableId>17582</RefTableId>
+      <StateNumber>4858</StateNumber>
+      <RefTableId>17641</RefTableId>
       <RefTableName>orders</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <foreign-key id="286" parent="268" name="fk70cew2v6c93kdlub8ey6rmbpr">
+    <foreign-key id="284" parent="268" name="fk70cew2v6c93kdlub8ey6rmbpr">
       <ColNames>order_movie_set_id</ColNames>
-      <ObjectId>17594</ObjectId>
+      <ObjectId>17657</ObjectId>
       <RefColNames>id</RefColNames>
       <RefColPositions>1</RefColPositions>
-      <StateNumber>4800</StateNumber>
-      <RefTableId>17575</RefTableId>
+      <StateNumber>4857</StateNumber>
+      <RefTableId>17634</RefTableId>
       <RefTableName>order_movie</RefTableName>
       <RefTableKind>table</RefTableKind>
     </foreign-key>
-    <index id="287" parent="268" name="orders_order_movie_pkey">
+    <index id="285" parent="268" name="orders_order_movie_pkey">
       <ColNames>order_id
 order_movie_set_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>17590</ObjectId>
+      <ObjectId>17653</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>4797</StateNumber>
+      <StateNumber>4854</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
+      <CollationIds>100
+100</CollationIds>
+      <CollationNames>default
+default</CollationNames>
+      <CollationParentNames>pg_catalog
+pg_catalog</CollationParentNames>
     </index>
-    <index id="288" parent="268" name="uk_4yecp7l3sv2u8835h4ep7cjgd">
+    <index id="286" parent="268" name="uk_4yecp7l3sv2u8835h4ep7cjgd">
       <ColNames>order_movie_set_id</ColNames>
-      <ObjectId>17592</ObjectId>
-      <StateNumber>4799</StateNumber>
+      <ObjectId>17655</ObjectId>
+      <StateNumber>4856</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
+      <CollationNames>default</CollationNames>
+      <CollationIds>100</CollationIds>
+      <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="289" parent="268" name="orders_order_movie_pkey">
+    <key id="287" parent="268" name="orders_order_movie_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>17591</ObjectId>
+      <ObjectId>17654</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>4797</StateNumber>
-      <UnderlyingIndexId>17590</UnderlyingIndexId>
+      <StateNumber>4854</StateNumber>
+      <UnderlyingIndexId>17653</UnderlyingIndexId>
     </key>
-    <key id="290" parent="268" name="uk_4yecp7l3sv2u8835h4ep7cjgd">
-      <ObjectId>17593</ObjectId>
-      <StateNumber>4799</StateNumber>
-      <UnderlyingIndexId>17592</UnderlyingIndexId>
+    <key id="288" parent="268" name="uk_4yecp7l3sv2u8835h4ep7cjgd">
+      <ObjectId>17656</ObjectId>
+      <StateNumber>4856</StateNumber>
+      <UnderlyingIndexId>17655</UnderlyingIndexId>
     </key>
   </database-model>
 </dataSource>

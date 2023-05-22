@@ -16,14 +16,14 @@ import java.util.UUID;
 @Embeddable
 @Getter
 public class DomainObjectId implements Serializable {
-    private Long id;
+    private String id;
 
     public DomainObjectId() {
 
     }
 
     @JsonCreator
-    protected DomainObjectId(@NonNull Long uuid) {
+    protected DomainObjectId(@NonNull String uuid) {
         this.id = Objects.requireNonNull(uuid, "uuid must not be null");
     }
 
@@ -31,7 +31,7 @@ public class DomainObjectId implements Serializable {
     public static <ID extends DomainObjectId> ID randomId(@NonNull Class<ID> idClass) {
         Objects.requireNonNull(idClass, "idClass must not be null");
         try {
-            return idClass.getConstructor(Long.class).newInstance(Long.parseLong(UUID.randomUUID().toString()));
+            return idClass.getConstructor(String.class).newInstance(UUID.randomUUID().toString());
         } catch (Exception ex) {
             throw new RuntimeException("Could not create new instance of " + idClass, ex);
         }
