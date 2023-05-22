@@ -32,6 +32,21 @@ public class MovieServiceImpl implements MovieService {
     }
 
     @Override
+    public Movie orderMovieCreated(MovieId movieId) {
+        Movie m = movieRepository.findById(movieId).orElseThrow(MovieNotFoundException::new);
+        movieRepository.saveAndFlush(m);
+        return m;
+
+    }
+
+    @Override
+    public Movie orderMovieRemoved(MovieId movieId) {
+        Movie m = movieRepository.findById(movieId).orElseThrow(MovieNotFoundException::new);
+        movieRepository.saveAndFlush(m);
+        return m;
+    }
+
+    @Override
     public List<Movie> getAll() {
         return movieRepository.findAll();
     }

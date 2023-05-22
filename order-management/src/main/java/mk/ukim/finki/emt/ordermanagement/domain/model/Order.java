@@ -1,5 +1,6 @@
 package mk.ukim.finki.emt.ordermanagement.domain.model;
 
+import lombok.Getter;
 import lombok.NonNull;
 import mk.ukim.finki.emt.ordermanagement.domain.valueObjects.Movie;
 import mk.ukim.finki.emt.ordermanagement.domain.valueObjects.User;
@@ -17,6 +18,7 @@ import java.util.Set;
 
 @Entity
 @Table(name = "orders")
+@Getter
 public class Order extends AbstractEntity<OrderId> {
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     private Set<OrderMovie> orderMovieSet = new HashSet<>();

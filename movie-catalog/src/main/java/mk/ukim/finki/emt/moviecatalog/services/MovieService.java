@@ -10,5 +10,7 @@ import java.util.List;
 public interface MovieService {
     Movie findById(MovieId movieId);
     Movie createMovie(MovieForm movieForm);
+    Movie orderMovieCreated(MovieId movieId);
+    Movie orderMovieRemoved(MovieId movieId);
     List<Movie> getAll();
 }

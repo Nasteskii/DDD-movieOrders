@@ -4,40 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28ea6e5a-7e1c-4765-9fda-dd793fbba86a" name="Changes" comment="Implemented service and repository Order and Movie">
-      <change afterPath="$PROJECT_DIR$/movie-catalog/src/main/java/mk/ukim/finki/emt/moviecatalog/config/DataInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/movie-catalog/src/main/java/mk/ukim/finki/emt/moviecatalog/xport/MovieResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/movie-catalog/src/main/java/mk/ukim/finki/emt/moviecatalog/xport/rest/MovieResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-management/src/main/java/mk/ukim/finki/emt/ordermanagement/xport/client/MovieClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-management/src/test/java/mk/ukim/finki/emt/ordermanagement/service/OrderServiceImplTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shared-kernel/src/main/java/mk/ukim/finki/emt/sharedkernel/domain/valueObjects/Genre.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-management/src/main/java/mk/ukim/finki/emt/usermanagement/domain/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-management/src/main/java/mk/ukim/finki/emt/usermanagement/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-management/src/main/java/mk/ukim/finki/emt/usermanagement/service/form/UserForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-management/src/main/java/mk/ukim/finki/emt/usermanagement/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8b408e80-480c-44b8-91fa-f45c7388df69.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/8b408e80-480c-44b8-91fa-f45c7388df69.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8b408e80-480c-44b8-91fa-f45c7388df69/storage_v2/_src_/database/po_movies.g6lWSg/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/8b408e80-480c-44b8-91fa-f45c7388df69/storage_v2/_src_/database/po_movies.g6lWSg/schema/public.abK9xQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/bfdda0d9-99a4-46bf-9eea-a6e236b0ca51.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/bfdda0d9-99a4-46bf-9eea-a6e236b0ca51.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/bfdda0d9-99a4-46bf-9eea-a6e236b0ca51/storage_v2/_src_/database/po_orders.JWXiTQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/bfdda0d9-99a4-46bf-9eea-a6e236b0ca51/storage_v2/_src_/database/po_orders.JWXiTQ/schema/public.abK9xQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f5cefcff-82f7-4ff1-88bd-2eca8bf2997a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f5cefcff-82f7-4ff1-88bd-2eca8bf2997a.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f5cefcff-82f7-4ff1-88bd-2eca8bf2997a/storage_v2/_src_/database/po_users.yEMaCw/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f5cefcff-82f7-4ff1-88bd-2eca8bf2997a/storage_v2/_src_/database/po_users.yEMaCw/schema/public.abK9xQ.meta" afterDir="false" />
+    <list default="true" id="28ea6e5a-7e1c-4765-9fda-dd793fbba86a" name="Changes" comment="Implemented events for communication with Kafka">
+      <change afterPath="$PROJECT_DIR$/movie-catalog/src/main/java/mk/ukim/finki/emt/moviecatalog/xport/events/MovieEventListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-management/src/main/java/mk/ukim/finki/emt/ordermanagement/infra/DomainEventPublisherImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shared-kernel/src/main/java/mk/ukim/finki/emt/sharedkernel/domain/config/TopicHolder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shared-kernel/src/main/java/mk/ukim/finki/emt/sharedkernel/domain/events/DomainEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shared-kernel/src/main/java/mk/ukim/finki/emt/sharedkernel/domain/events/orders/OrderMovieCreated.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shared-kernel/src/main/java/mk/ukim/finki/emt/sharedkernel/domain/events/orders/OrderMovieRemoved.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shared-kernel/src/main/java/mk/ukim/finki/emt/sharedkernel/infra/DomainEventPublisher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie-catalog/src/main/java/mk/ukim/finki/emt/moviecatalog/domain/models/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-catalog/src/main/java/mk/ukim/finki/emt/moviecatalog/domain/models/Movie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie-catalog/src/main/java/mk/ukim/finki/emt/moviecatalog/domain/models/MovieId.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-catalog/src/main/java/mk/ukim/finki/emt/moviecatalog/domain/models/MovieId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie-catalog/src/main/java/mk/ukim/finki/emt/moviecatalog/domain/valueObjects/Genre.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-catalog/src/main/java/mk/ukim/finki/emt/moviecatalog/domain/valueObjects/Genre.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-catalog/src/main/java/mk/ukim/finki/emt/moviecatalog/services/MovieService.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-catalog/src/main/java/mk/ukim/finki/emt/moviecatalog/services/MovieService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie-catalog/src/main/java/mk/ukim/finki/emt/moviecatalog/services/impl/MovieServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/movie-catalog/src/main/java/mk/ukim/finki/emt/moviecatalog/services/impl/MovieServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order-management/src/main/java/mk/ukim/finki/emt/ordermanagement/domain/model/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-management/src/main/java/mk/ukim/finki/emt/ordermanagement/domain/model/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-management/src/main/java/mk/ukim/finki/emt/ordermanagement/domain/model/OrderId.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-management/src/main/java/mk/ukim/finki/emt/ordermanagement/domain/model/OrderId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-management/src/main/java/mk/ukim/finki/emt/ordermanagement/domain/model/OrderMovieId.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-management/src/main/java/mk/ukim/finki/emt/ordermanagement/domain/model/OrderMovieId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-management/src/main/java/mk/ukim/finki/emt/ordermanagement/domain/valueObjects/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-management/src/main/java/mk/ukim/finki/emt/ordermanagement/domain/valueObjects/Movie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-management/src/main/java/mk/ukim/finki/emt/ordermanagement/domain/valueObjects/MovieId.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-management/src/main/java/mk/ukim/finki/emt/ordermanagement/domain/valueObjects/MovieId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-management/src/main/java/mk/ukim/finki/emt/ordermanagement/domain/valueObjects/UserId.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-management/src/main/java/mk/ukim/finki/emt/ordermanagement/domain/valueObjects/UserId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-management/src/main/java/mk/ukim/finki/emt/ordermanagement/service/impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-management/src/main/java/mk/ukim/finki/emt/ordermanagement/service/impl/OrderServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order-management/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/order-management/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shared-kernel/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shared-kernel/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shared-kernel/src/main/java/mk/ukim/finki/emt/sharedkernel/domain/base/DomainObjectId.java" beforeDir="false" afterPath="$PROJECT_DIR$/shared-kernel/src/main/java/mk/ukim/finki/emt/sharedkernel/domain/base/DomainObjectId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-management/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-management/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-management/src/main/java/mk/ukim/finki/emt/usermanagement/UserManagementApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-management/src/main/java/mk/ukim/finki/emt/usermanagement/UserManagementApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-management/src/main/java/mk/ukim/finki/emt/usermanagement/domain/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-management/src/main/java/mk/ukim/finki/emt/usermanagement/domain/model/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,6 +74,9 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.importing&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;7147f4131ffc015b50f243f3d68cd41a&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
@@ -204,7 +188,7 @@
       <workItem from="1684229028194" duration="12283000" />
       <workItem from="1684452231441" duration="7772000" />
       <workItem from="1684602741622" duration="1638000" />
-      <workItem from="1684751247215" duration="5284000" />
+      <workItem from="1684751247215" duration="12192000" />
     </task>
     <task id="LOCAL-00001" summary="Created project modules and configured pom.xml, application.properties and models.">
       <created>1684170123681</created>
@@ -227,7 +211,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684243791529</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Implemented tests for order services.">
+      <created>1684757317938</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1684757317938</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,6 +251,7 @@
     <MESSAGE value="Created project modules and configured pom.xml, application.properties and models." />
     <MESSAGE value="Implemented models, value objects and other functionalities" />
     <MESSAGE value="Implemented service and repository Order and Movie" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented service and repository Order and Movie" />
+    <MESSAGE value="Implemented tests for order services." />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented tests for order services." />
   </component>
 </project>

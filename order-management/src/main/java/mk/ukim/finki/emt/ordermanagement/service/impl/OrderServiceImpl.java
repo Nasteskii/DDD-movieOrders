@@ -7,9 +7,13 @@ import mk.ukim.finki.emt.ordermanagement.domain.model.Order;
 import mk.ukim.finki.emt.ordermanagement.domain.model.OrderId;
 import mk.ukim.finki.emt.ordermanagement.domain.model.OrderMovieId;
 import mk.ukim.finki.emt.ordermanagement.domain.repository.OrderRepository;
+import mk.ukim.finki.emt.ordermanagement.domain.valueObjects.MovieId;
 import mk.ukim.finki.emt.ordermanagement.service.OrderService;
 import mk.ukim.finki.emt.ordermanagement.service.forms.OrderForm;
 import mk.ukim.finki.emt.ordermanagement.service.forms.OrderMovieForm;
+import mk.ukim.finki.emt.sharedkernel.domain.events.orders.OrderMovieCreated;
+import mk.ukim.finki.emt.sharedkernel.domain.events.orders.OrderMovieRemoved;
+import mk.ukim.finki.emt.sharedkernel.infra.DomainEventPublisher;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -24,6 +28,7 @@ import java.util.Optional;
 @AllArgsConstructor
 public class OrderServiceImpl implements OrderService {
     private final OrderRepository orderRepository;
+    private final DomainEventPublisher domainEventPublisher;
     private final Validator validator;
 
     @Override
@@ -34,6 +39,7 @@ public class OrderServiceImpl implements OrderService {
             throw new ConstraintViolationException("The order form is not valid", constraintViolations);
         }
         var newOrder = orderRepository.saveAndFlush(toDomainObject(orderForm));
+        newOrder.getOrderMovieSet().forEach(movie -> domainEventPublisher.publish(new OrderMovieCreated(movie.getMovieId().getId())));
         return newOrder.getId();
     }
 
@@ -52,6 +58,7 @@ public class OrderServiceImpl implements OrderService {
         Order order = orderRepository.findById(orderId).orElseThrow(OrderIdNotExistsException::new);
         order.addMovie(orderMovieForm.getMovie(), orderMovieForm.getQuality());
         orderRepository.saveAndFlush(order);
+        domainEventPublisher.publish(new OrderMovieCreated(orderMovieForm.getMovie().getMovieId().getId()));
     }
 
     @Override
@@ -59,6 +66,7 @@ public class OrderServiceImpl implements OrderService {
         Order order = orderRepository.findById(orderId).orElseThrow(OrderIdNotExistsException::new);
         order.removeMovie(orderMovieId);
         orderRepository.saveAndFlush(order);
+        domainEventPublisher.publish(new OrderMovieRemoved(orderMovieId.getId()));
     }
 
     private Order toDomainObject(OrderForm orderForm) {
